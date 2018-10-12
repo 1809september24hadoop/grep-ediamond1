@@ -16,10 +16,8 @@ grep '\<.ar' cities.txt
 grep -ni '^[^c]' cities.txt 
 
 6.
-// "'Any character' x 14 or more"
-grep -x '.\{14,\}' cities.txt
-//or
-grep -c '^..............' cities.txt  
+// "'Any character other than a space' x 14 or more"
+grep -x '[^ ]\{14,\}' Cities.txt
 
 7.
 grep -nic '^b' cities.txt 
