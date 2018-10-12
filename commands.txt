@@ -19,7 +19,7 @@ grep -ni '^[^c]' cities.txt
 // "'Any character' x 14 or more"
 grep -x '.\{14,\}' cities.txt
 //or
-grep -c '^..............' Cities.txt  
+grep -c '^..............' cities.txt  
 
 7.
 grep -nic '^b' cities.txt 
@@ -29,10 +29,10 @@ grep -nic '^b' cities.txt
 grep d -o cities.txt | wc -l 
 
 9.
-// "Any character, that same character once again, then the end of the line"
-grep -nE '(.)\1{1}$' cities.txt 
+// "Any character, that same character again, then the end of the line"
+grep -nE '(.)\1$' cities.txt 
 
 10.
-// "Start of the line, any three characters, the second character once again, 
-// the first chracter once again, then the end of the line"
-grep -iE '^(.)(.)(.)\2{1}\1{1}$' cities.txt 
+// "Start of the line, any three characters, the second character again, 
+// the first chracter again, then the end of the line"
+grep -iE '^(.)(.).\2\1$' cities.txt 
